@@ -1,7 +1,7 @@
 'use client';
 
 import { Carousel } from 'flowbite-react';
-import logo from './logo.svg';
+import logo from 'logo.svg';
 export default function DefaultCarousel() {
     return (
         <div className="h-96 w-96">
