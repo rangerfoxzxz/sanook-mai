@@ -1,6 +1,7 @@
 "use client";
 
 import { Dropdown, Navbar, Avatar } from "flowbite-react";
+import logo from "logo.svg";
 
 export default function NavbarWithDropdown() {
   return (
@@ -9,7 +10,7 @@ export default function NavbarWithDropdown() {
         <img
           alt="Flowbite React Logo"
           className="mr-3 h-6 sm:h-9"
-          src="/favicon.svg"
+          src={logo}
         />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
           Flowbite React
