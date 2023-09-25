@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import { Carousel } from "flowbite-react";
 import logo from "logo.svg";
+import right from "assets/right.svg";
+import left from "assets/left.svg";
 import api from "shares/api";
 import "components/carousel.css";
 export default function DefaultCarousel() {
@@ -25,7 +27,10 @@ export default function DefaultCarousel() {
       })
       .catch((error) => {
         console.error("Error:", error);
-        setData([{ id: 1, url: "http://www.google.com" }]);
+        setData([
+          { id: 1, url: "http://www.google.com" },
+          { id: 2, url: "http://www.google.com" },
+        ]);
       });
   }, []);
 
@@ -42,8 +47,14 @@ export default function DefaultCarousel() {
   // }, []);
 
   return (
-    <div className="h-[500px]">
-      <Carousel slideInterval={10000}>
+    <div className="h-[300px] bg-[#FFFFFF]">
+      <Carousel
+        slideInterval={10000}
+        leftControl={<img className="h-[100px] w-[100px]" src={left}></img>}
+        rightControl={<img className="h-[100px] w-[100px]" src={right}></img>}
+
+        // rightControl="right"
+      >
         {data.map((value) => {
           return (
             <img

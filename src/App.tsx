@@ -8,7 +8,7 @@ import MainPage from "pages/main-page";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-[#D8D8D8]">
       <MainPage></MainPage>
       {/* <header className="App-header">
 

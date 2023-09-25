@@ -13,12 +13,12 @@ export default function MainPage() {
     // <div className="App">
     //   <header className="App-header">
     <>
-    <div className="container mx-auto px-4">
-      <DefaultNavbar></DefaultNavbar>
-      <DefaultCarousel></DefaultCarousel>
-      <SearchBox></SearchBox>
-      <News></News>
-      <TabCenter></TabCenter>
+      <div className="container mx-auto px-4">
+        <DefaultNavbar></DefaultNavbar>
+        <DefaultCarousel></DefaultCarousel>
+        <SearchBox></SearchBox>
+        <News></News>
+        <TabCenter></TabCenter>
       </div>
     </>
     //   </header>
