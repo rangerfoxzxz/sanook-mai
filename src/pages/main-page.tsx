@@ -7,6 +7,7 @@ import DefaultNavbar from "components/navbar";
 import News from "components/news";
 import SearchBox from "components/search-box";
 import TabCenter from "components/tab-center";
+import AllLink from "components/all-link";
 
 export default function MainPage() {
   return (
@@ -19,6 +20,7 @@ export default function MainPage() {
         <SearchBox></SearchBox>
         <News></News>
         <TabCenter></TabCenter>
+        <AllLink></AllLink>
       </div>
     </>
     //   </header>
