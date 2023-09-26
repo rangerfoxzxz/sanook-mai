@@ -47,24 +47,24 @@ export default function AllLink() {
   const items: any[] = [
     {
       id: 1,
-      tabName: "Mobile",
+      tabName: "การแก้ปัญหา iPhone",
       subtab: true,
       content: [
         {
           id: 1,
-          name: "Item 1",
+          name: "เปิดไม่ติด",
           url: "https://picsum.photos/id/33/200/150",
           link: "https:www.google.com",
         },
         {
           id: 2,
-          name: "Item 2",
+          name: "แอป Line ค้าง",
           url: "https://picsum.photos/id/44/200/150",
           link: "https:www.google.com",
         },
         {
           id: 3,
-          name: "Item 3",
+          name: "ชาร์จไม่เข้า",
           url: "https://picsum.photos/id/55/200/150",
           link: "https:www.google.com",
         },
@@ -72,7 +72,7 @@ export default function AllLink() {
     },
     {
       id: 2,
-      tabName: "Postpaid",
+      tabName: "การแก้ปัญหา Android",
       subtab: false,
       subtabContent: [],
       content: [
@@ -98,7 +98,7 @@ export default function AllLink() {
     },
     {
       id: 3,
-      tabName: "Pretpaid",
+      tabName: "การแก้ปัญหา Fibre",
       subtab: false,
       subtabContent: [],
       content: [
