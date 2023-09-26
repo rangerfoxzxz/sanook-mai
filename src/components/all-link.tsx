@@ -44,60 +44,109 @@ export default function AllLink() {
     },
   };
 
+  const items: any[] = [
+    {
+      id: 1,
+      tabName: "Mobile",
+      subtab: true,
+      content: [
+        {
+          id: 1,
+          name: "Item 1",
+          url: "https://picsum.photos/id/33/200/150",
+          link: "https:www.google.com",
+        },
+        {
+          id: 2,
+          name: "Item 2",
+          url: "https://picsum.photos/id/44/200/150",
+          link: "https:www.google.com",
+        },
+        {
+          id: 3,
+          name: "Item 3",
+          url: "https://picsum.photos/id/55/200/150",
+          link: "https:www.google.com",
+        },
+      ],
+    },
+    {
+      id: 2,
+      tabName: "Postpaid",
+      subtab: false,
+      subtabContent: [],
+      content: [
+        {
+          id: 1,
+          name: "Item 1",
+          url: "https://picsum.photos/id/66/200/150",
+          link: "https:www.google.com",
+        },
+        {
+          id: 2,
+          name: "Item 2",
+          url: "https://picsum.photos/id/77/200/150",
+          link: "https:www.google.com",
+        },
+        {
+          id: 3,
+          name: "Item 3",
+          url: "https://picsum.photos/id/88/200/150",
+          link: "https:www.google.com",
+        },
+      ],
+    },
+    {
+      id: 3,
+      tabName: "Pretpaid",
+      subtab: false,
+      subtabContent: [],
+      content: [
+        {
+          id: 1,
+          name: "Item 1",
+          url: "https://picsum.photos/id/43/200/150",
+          link: "https:www.google.com",
+        },
+        {
+          id: 2,
+          name: "Item 2",
+          url: "https://picsum.photos/id/55/200/150",
+          link: "https:www.google.com",
+        },
+        {
+          id: 3,
+          name: "Item 3",
+          url: "https://picsum.photos/id/76/200/150",
+          link: "https:www.google.com",
+        },
+      ],
+    },
+  ];
+
   return (
-    <div className="py-2">
+    <div className="my-2 p-2 bg-white">
       <p className="text-left text-5xl text-red-400 underline  underline-offset-3">
-        News
+        News3
       </p>
       <Flowbite theme={{ theme: customTheme }}>
-        <Tabs.Group aria-label="Default tabs" style="default">
-          <Tabs.Item active icon={HiUserCircle} title="Profile">
-            <p>
-              This is
-              <span className="font-medium text-red-800 dark:text-white">
-                Profile tab's associated content
-              </span>
-              . Clicking another tab will toggle the visibility of this one for
-              the next. The tab JavaScript swaps classes to control the content
-              visibility and styling.
-            </p>
-          </Tabs.Item>
-          <Tabs.Item icon={MdDashboard} title="Dashboard">
-            <p>
-              This is
-              <span className="font-medium text-red-800 dark:text-white">
-                Dashboard tab's associated content
-              </span>
-              . Clicking another tab will toggle the visibility of this one for
-              the next. The tab JavaScript swaps classes to control the content
-              visibility and styling.
-            </p>
-          </Tabs.Item>
-          <Tabs.Item icon={HiAdjustments} title="Settings">
-            <p>
-              This is
-              <span className="font-medium text-red-800 dark:text-white">
-                Settings tab's associated content
-              </span>
-              . Clicking another tab will toggle the visibility of this one for
-              the next. The tab JavaScript swaps classes to control the content
-              visibility and styling.
-            </p>
-          </Tabs.Item>
-          <Tabs.Item icon={HiClipboardList} title="Contacts">
-            <p>
-              This is
-              <span className="font-medium text-red-800 dark:text-white">
-                Contacts tab's associated content
-              </span>
-              . Clicking another tab will toggle the visibility of this one for
-              the next. The tab JavaScript swaps classes to control the content
-              visibility and styling.
-            </p>
-          </Tabs.Item>
-          <Tabs.Item disabled title="Disabled">
-            <p>Disabled content</p>
-          </Tabs.Item>
+        <Tabs.Group aria-label="Default tabs" style="default" className="p-2">
+          {items?.length > 0 &&
+            items.map((tab: any) => (
+              <Tabs.Item active icon={HiUserCircle} title={tab.tabName}>
+                {tab.content?.length > 0 &&
+                  tab.content.map((tab2: any) => (
+                    <div className="grid grid-cols-12">
+                      <div className="col-span-12 text-left pl-3 pt-2 ">
+                        <div className="flex items-center">
+                          <HiAdjustments className="mr-1" />
+                          <span>{tab2.name}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+              </Tabs.Item>
+            ))}
         </Tabs.Group>
       </Flowbite>
     </div>
