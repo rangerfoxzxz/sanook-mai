@@ -28,8 +28,8 @@ export default function DefaultCarousel() {
       .catch((error) => {
         console.error("Error:", error);
         setData([
-          { id: 1, url: "http://www.google.com" },
-          { id: 2, url: "http://www.google.com" },
+          { id: 1, url: "https://picsum.photos/id/44/300" },
+          { id: 2, url: "https://picsum.photos/id/23/300" },
         ]);
       });
   }, []);
